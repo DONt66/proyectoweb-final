@@ -1,13 +1,11 @@
-body {
+body{
     background-color: rgb(31, 0, 0);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-
-
-header {
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +16,7 @@ header {
     border-radius: clamp(12px, 2vw, 20px);
 }
 
-.botones-header {
+.botones-header{
     font-family: Bahnschrift, Arial, sans-serif;
     color: white;
 }
@@ -39,17 +37,17 @@ header {
     color: black;
 }
 
-.logo {
+.logo{
     display: flex;
     align-items: center;
 }
 
-.logo img {
+.logo img{
     width: 40px;
     margin-right: 10px;
 }
 
-.titulo a {
+.titulo a{
     text-decoration: none;
     color: inherit;
 }
@@ -57,21 +55,24 @@ header {
 .titulo {
     transition: transform 0.3s ease;
     font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
-    color: rgb(245, 92, 92);
+    color:rgb(245, 92, 92);
 }
 
 .titulo:hover {
     transform: scale(1.24) rotate(-6deg);
 }
 
-nav a {
+nav a{
     margin-left: 15px;
     text-decoration: none;
     color: black;
 }
 
+
 .slider {
     width: 100%;
+    height: 56.25vw;
+    max-height: 73vh;
     overflow: hidden;
     margin-top: 20px;
 }
@@ -92,6 +93,7 @@ nav a {
     flex-shrink: 0;
 }
 
+
 @keyframes slide {
     0%   { transform: translateX(0%); }
     20%  { transform: translateX(0%); }
@@ -103,7 +105,6 @@ nav a {
     95%  { transform: translateX(-60%); }
     100% { transform: translateX(-80%); }
 }
-
 
 .texto-central {
     position: absolute;
@@ -119,6 +120,7 @@ nav a {
 }
 
 .titulo-slider {
+    font-size: 2.37rem;
     font-family: "Arial Black", Gadget, sans-serif;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -126,9 +128,12 @@ nav a {
 }
 
 .boton-slider {
+    padding: 14px 36px;
+    font-size: 1.1rem;
     background-color: transparent;
     color: white;
     border: 2px solid white;
+    border-radius: 16px;
     text-decoration: none;
     font-family: Consolas, "Courier New", monospace;
     cursor: pointer;
@@ -141,7 +146,6 @@ nav a {
     color: rgb(255, 112, 112);
 }
 
-
 .formulario {
     display: flex;
     justify-content: center;
@@ -152,8 +156,11 @@ nav a {
     background-color: rgba(219, 0, 0, 0.12);
     border: 1px solid rgba(219, 0, 0, 0.3);
     border-radius: 20px;
+    padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 380px;
     box-sizing: border-box;
 }
 
@@ -201,6 +208,7 @@ nav a {
 
 .boton-registrarse:hover {
     background-color: rgba(180, 0, 0, 0.9);
+    transition: 0.3s;
 }
 
 .boton-sesion {
@@ -217,6 +225,22 @@ nav a {
 
 .boton-sesion:hover {
     background-color: rgba(219, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.datos-personales{
+    font-family: Consolas, "Courier New", monospace;
+    color: rgb(181, 15, 15);
+}
+
+.titulo-clubdonetverse{
+    font-family: Verdana, Geneva, sans-serif;
+    color: rgb(181, 15, 15);
+}
+
+.iniciar-sesion{
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: rgb(181, 15, 15);
 }
 
 .boton-reset {
@@ -243,31 +267,9 @@ nav a {
     color: rgb(160, 0, 0);
 }
 
-
-
-.datos-personales {
-    font-family: Consolas, "Courier New", monospace;
-    color: rgb(181, 15, 15);
-}
-
-.titulo-clubdonetverse {
-    font-family: Verdana, Geneva, sans-serif;
-    color: rgb(181, 15, 15);
-}
-
-.iniciar-sesion {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    color: rgb(181, 15, 15);
-}
-
-.password-reset {
-    text-decoration: none;
-    color: red;
-}
-
-
 .pie {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: rgba(219, 0, 0, 0.25);
@@ -276,12 +278,14 @@ nav a {
 }
 
 .pie-centro a {
+    margin: 0 10px;
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
 .pie-derecha a {
+    margin-left: 8px;
     text-decoration: none;
     color: white;
 }
@@ -290,8 +294,6 @@ nav a {
     text-decoration: underline;
     color: rgb(209, 81, 81);
 }
-
-
 
 .grupo-opciones {
     display: flex;
@@ -318,7 +320,7 @@ nav a {
 
 
 
-.titulo-catalogo {
+.titulo-catalogo{
     color: white;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -327,6 +329,7 @@ nav a {
 .contenedor-productos {
     display: flex;
     justify-content: center;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -334,9 +337,12 @@ nav a {
     background-color: rgba(219, 0, 0, 0.06);
     border: 1px solid rgba(219, 0, 0, 0.3);
     border-radius: 20px;
+    padding: 2.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 340px;
+    gap: 0.8rem;
     transition: transform 0.25s, box-shadow 0.25s;
 }
 
@@ -346,6 +352,8 @@ nav a {
 }
 
 .recuadro-imagen {
+    width: 230px;
+    height: 230px;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid rgba(219, 0, 0, 0.2);
@@ -353,6 +361,7 @@ nav a {
 
 .recuadro-titulo {
     font-family: Bahnschrift, Arial, sans-serif;
+    font-size: 19px;
     font-weight: 600;
     color: rgb(181, 15, 15);
     text-align: center;
@@ -360,12 +369,14 @@ nav a {
 
 .precio-original {
     font-family: Bahnschrift, Arial, sans-serif;
+    font-size: 16px;
     color: rgba(180, 0, 0, 0.45);
     text-decoration: line-through;
 }
 
 .precio-oferta {
     font-family: Bahnschrift, Arial, sans-serif;
+    font-size: 25px;
     font-weight: 700;
     color: rgb(181, 15, 15);
 }
@@ -378,7 +389,7 @@ nav a {
 }
 
 .contenido-desplegable {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
@@ -406,15 +417,24 @@ nav a {
 }
 
 
+
+
+.password-reset{
+    text-decoration: none;
+    color: red;
+}
+
+
+
 .sobre-texto {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
     line-height: 1.8;
-    color: rgb(228, 97, 97);
+    color: inherit;
     margin: 0 0 1.2em 0;
     text-align: left;
     max-width: 700px;
 }
-
+ 
 .sobre-firma {
     margin-top: 2em;
     font-style: italic;
@@ -425,194 +445,15 @@ nav a {
     background-color: rgba(219, 0, 0, 0.12);
     border: 1px solid rgba(219, 0, 0, 0.3);
     border-radius: 20px;
+    padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    max-width: 700px;
     width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
 }
 
-
-@media (min-width: 1300px) {
-
-    .slider {
-        height: 56.25vw;
-        max-height: 73vh;
-    }
-
-    .titulo-slider {
-        font-size: 2.37rem;
-    }
-
-    .boton-slider {
-        padding: 14px 36px;
-        font-size: 1.1rem;
-        border-radius: 16px;
-    }
-
-    .caja {
-        padding: 2rem 2.5rem;
-        width: 100%;
-        max-width: 380px;
-    }
-
-    .caja-sobrenosotros {
-        padding: 2rem 2.5rem;
-    }
-
-    .contenedor-productos {
-        gap: 1.5rem;
-    }
-
-    .recuadro {
-        padding: 2.2rem;
-        width: 340px;
-        gap: 0.8rem;
-    }
-
-    .recuadro-imagen {
-        width: 230px;
-        height: 230px;
-    }
-
-    .recuadro-titulo {
-        font-size: 19px;
-    }
-
-    .precio-original {
-        font-size: 16px;
-    }
-
-    .precio-oferta {
-        font-size: 25px;
-    }
-
-    .pie {
-        justify-content: space-between;
-    }
-
-    .pie-centro a {
-        margin: 0 10px;
-    }
-
-    .pie-derecha a {
-        margin-left: 8px;
-    }
-
-    .sobre-texto {
-        font-size: 1rem;
-    }
-}
-
-
-/* ===========================
-   MÓVIL — max-width: 1299px
-=========================== */
-
-@media (max-width: 1299px) {
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        border-radius: 12px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    nav a {
-        margin-left: 0;
-    }
-
-    .slider {
-        height: 56.25vw;
-        max-height: 55vw;
-    }
-
-    .titulo-slider {
-        font-size: 1.2rem;
-    }
-
-    .boton-slider {
-        padding: 10px 22px;
-        font-size: 0.9rem;
-        border-radius: 12px;
-    }
-
-    .formulario {
-        padding: 1rem;
-    }
-
-    .caja {
-        padding: 1.5rem;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .caja-sobrenosotros {
-        padding: 1.5rem;
-        max-width: 100%;
-    }
-
-    .contenedor-productos {
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-
-    .recuadro {
-        padding: 1.4rem;
-        width: 100%;
-        max-width: 360px;
-        gap: 0.6rem;
-    }
-
-    .recuadro-imagen {
-        width: 180px;
-        height: 180px;
-    }
-
-    .recuadro-titulo {
-        font-size: 16px;
-    }
-
-    .precio-original {
-        font-size: 14px;
-    }
-
-    .precio-oferta {
-        font-size: 20px;
-    }
-
-    .pie {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        text-align: center;
-    }
-
-    .pie-centro a {
-        margin: 0 6px;
-    }
-
-    .pie-derecha a {
-        margin-left: 4px;
-    }
-
-    .contenido-desplegable {
-        left: auto;
-        right: 0;
-    }
-
-    .sobre-texto {
-        font-size: 0.95rem;
-        max-width: 100%;
-    }
-
-    .boton-header-club {
-        padding: 8px 14px;
-        font-size: 0.85rem;
-    }
+.sobre-texto{
+    color: rgb(228, 97, 97);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
